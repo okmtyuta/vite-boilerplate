@@ -3,8 +3,8 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:react-hooks/recommended',
-    'plugin:storybook/recommended'
+    'plugin:react-hooks/recommended'
+    // 'plugin:storybook/recommended'
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
@@ -12,7 +12,6 @@ module.exports = {
   rules: {
     'react-refresh/only-export-components': 'warn',
     '@typescript-eslint/no-empty-interface': 'off',
-    'no-extra-boolean-cast': 'off',
     'no-console': 'warn'
   }
 }

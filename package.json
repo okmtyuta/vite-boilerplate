@@ -1,19 +1,37 @@
 {
-  "name": "@okmtyuta/unokami",
-  "private": true,
+  "name": "@okmtyuta/boilerplate",
+  "private": false,
   "version": "0.0.0",
   "type": "module",
+  "author": "okmtyuta",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/okmtyuta/vite-boilerplate"
+  },
+  "files": [
+    "lib"
+  ],
+  "exports": {
+    ".": {
+      "require": "./lib/server/index.umd.cjs",
+      "import": "./lib/server/index.js",
+      "types": "./lib/server/types/index.d.ts"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build --outDir lib && tsc",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "format": "prettier --write ./",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@types/node": "^20.5.9",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
@@ -22,6 +40,7 @@
     "eslint": "^8.45.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
+    "prettier": "^3.0.3",
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
   }
